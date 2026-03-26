@@ -1,21 +1,3 @@
-"""
-GRAMÁTICA 1: Asociatividad por IZQUIERDA con precedencia matemática estándar
-Precedencia (mayor a menor): ^ > * / > + -
-Asociatividad: IZQUIERDA para todos los operadores
-Cadena de prueba: 2 + 3 * 4 - 5 / 1 ^ 2
-"""
-
-# ============================================================
-# ANALIZADOR DESCENDENTE RECURSIVO - ASOCIATIVIDAD IZQUIERDA
-# Gramática BNF:
-#   expr   -> term   { ('+' | '-') term }
-#   term   -> factor { ('*' | '/') factor }
-#   factor -> base   ['^' base]        (^ NO asocia por izquierda aquí
-#                                        pero se puede encadenar con paréntesis)
-#   base   -> NUMBER | '(' expr ')'
-# Nota: Para left-assoc en ^, usamos bucle en factor
-# ============================================================
-
 import re
 
 class Lexer:
