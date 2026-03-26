@@ -1,21 +1,3 @@
-"""
-GRAMÁTICA 4: Asociatividad DERECHA con precedencia INVERSA (no estándar)
-Precedencia inversa (mayor a menor): + - > * / > ^
-Asociatividad: DERECHA
-Cadena de prueba: 2 + 3 * 4 - 5 / 1 ^ 2
-"""
-
-# ============================================================
-# ANALIZADOR DESCENDENTE RECURSIVO
-# Precedencia INVERSA + Asociatividad DERECHA:
-#
-# Gramática BNF:
-#   expr   -> term   ('^' expr)?         <-- ^ tiene MENOR precedencia, asoc. DERECHA
-#   term   -> suma   (('*' | '/') term)? <-- */ tiene prec. media, asoc. DERECHA
-#   suma   -> base   (('+' | '-') suma)? <-- +- tienen MAYOR precedencia, asoc. DERECHA
-#   base   -> NUMBER | '(' expr ')'
-# ============================================================
-
 import re
 
 class Lexer:
