@@ -1,19 +1,3 @@
-"""
-GRAMÁTICA 2: Asociatividad por DERECHA con precedencia matemática estándar
-Precedencia (mayor a menor): ^ > * / > + -
-Asociatividad: DERECHA para todos los operadores
-Cadena de prueba: 2 + 3 * 4 - 5 / 1 ^ 2
-"""
-
-# ============================================================
-# ANALIZADOR DESCENDENTE RECURSIVO - ASOCIATIVIDAD DERECHA
-# Gramática BNF:
-#   expr   -> term   ('+' | '-') expr  | term
-#   term   -> expo   ('*' | '/') term  | expo
-#   expo   -> base   '^' expo          | base   <-- recursión derecha
-#   base   -> NUMBER | '(' expr ')'
-# ============================================================
-
 import re
 
 class Lexer:
