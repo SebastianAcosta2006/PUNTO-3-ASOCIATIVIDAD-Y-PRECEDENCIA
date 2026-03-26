@@ -1,18 +1,4 @@
-"""
-COMPARADOR DE GRAMÁTICAS
-Ejecuta las 4 versiones de gramática sobre las mismas cadenas
-y muestra una comparación detallada de resultados.
-
-Cadenas de prueba:
-  1. "2 + 3 * 4 - 5 / 1 ^ 2"   (expresión mixta)
-  2. "2 ^ 3 ^ 2"                (asociatividad pura de ^)
-"""
-
 import re
-
-# ─────────────────────────────────────────────────────────────
-# CLASES COMPARTIDAS
-# ─────────────────────────────────────────────────────────────
 
 class Lexer:
     def __init__(self, text):
