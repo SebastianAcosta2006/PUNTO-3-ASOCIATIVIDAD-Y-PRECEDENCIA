@@ -1,22 +1,3 @@
-"""
-GRAMÁTICA 3: Asociatividad IZQUIERDA con precedencia INVERSA (no estándar)
-Precedencia inversa (mayor a menor): + - > * / > ^
-Asociatividad: IZQUIERDA
-Cadena de prueba: 2 + 3 * 4 - 5 / 1 ^ 2
-"""
-
-# ============================================================
-# ANALIZADOR DESCENDENTE RECURSIVO
-# En gramáticas LL, mayor precedencia = producción más profunda
-# Precedencia INVERSA: +- tienen mayor precedencia, ^ la menor
-#
-# Gramática BNF con precedencia invertida:
-#   expr   -> term  ['^' term]*          <-- ^ tiene MENOR precedencia
-#   term   -> suma  [('*' | '/') suma]*  <-- */ tiene precedencia media
-#   suma   -> base  [('+' | '-') base]*  <-- +- tienen MAYOR precedencia
-#   base   -> NUMBER | '(' expr ')'
-# ============================================================
-
 import re
 
 class Lexer:
